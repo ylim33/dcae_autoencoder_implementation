@@ -1,0 +1,15 @@
+test_original_draw_order_and_transpose (test_legacy.LegacyTests.test_original_draw_order_and_transpose) ... ok
+test_stochastic_calls_and_restore (test_legacy.LegacyTests.test_stochastic_calls_and_restore) ... ok
+test_bundle_predictors_match_sklearn (test_reproduction.ReproductionTests.test_bundle_predictors_match_sklearn) ... ok
+test_calibration_protocols (test_reproduction.ReproductionTests.test_calibration_protocols) ... ok
+test_forward_matches_numpy_equations (test_reproduction.ReproductionTests.test_forward_matches_numpy_equations) ... ok
+test_gradients (test_reproduction.ReproductionTests.test_gradients) ... ok
+test_legacy_cross_entropy_scale (test_reproduction.ReproductionTests.test_legacy_cross_entropy_scale) ... ok
+test_linear_reconstruction_correction_cancels (test_reproduction.ReproductionTests.test_linear_reconstruction_correction_cancels) ... ok
+test_optimizer_restores_returned_solution (test_reproduction.ReproductionTests.test_optimizer_restores_returned_solution) ... ok
+test_regression_head_allows_negative_values (test_reproduction.ReproductionTests.test_regression_head_allows_negative_values) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.528s
+
+OK

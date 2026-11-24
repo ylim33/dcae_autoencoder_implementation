@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the original DCAE paper first. If you use this reproduction, also identify this repository and the exact commit."
+title: "DCAE: Python 3.11 / PyTorch reproduction"
+type: software
+authors:
+  - name: "YaoliMa33"
+    website: "https://github.com/YaoliMa33"
+repository-code: "https://github.com/YaoliMa33/dcae_autoencoder_implementation"
+url: "https://github.com/YaoliMa33/dcae_autoencoder_implementation"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Yan"
+      given-names: "Ke"
+    - family-names: "Zhang"
+      given-names: "David"
+  title: "Correcting Instrumental Variation and Time-Varying Drift: A Transfer Learning Approach With Autoencoders"
+  journal: "IEEE Transactions on Instrumentation and Measurement"
+  year: 2016
+  month: 9
+  volume: 65
+  issue: 9
+  start: 2012
+  end: 2022
+  doi: "10.1109/TIM.2016.2573078"

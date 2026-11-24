@@ -1,0 +1,20 @@
+{
+  "pretrain": {
+    "optimizer": "Adam",
+    "steps_per_layer": 400,
+    "final_layer_losses": [
+      0.029107601676517495,
+      0.04636901724972454
+    ],
+    "corruption": 0.1,
+    "lr": 0.01,
+    "l2": 0.0
+  },
+  "supervised": {
+    "loss": 0.0509786661465636,
+    "iterations": 807,
+    "evaluations": 1480,
+    "converged": true,
+    "message": "Optimization terminated successfully."
+  }
+}

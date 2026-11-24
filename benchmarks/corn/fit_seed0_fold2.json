@@ -1,0 +1,69 @@
+{
+  "pretrain": {
+    "optimizer": "Adam",
+    "steps_per_layer": 400,
+    "final_layer_losses": [
+      0.01603490852399691
+    ],
+    "corruption": 0.1,
+    "lr": 0.001,
+    "l2": 0.001
+  },
+  "supervised": {
+    "loss": 0.0489930239892152,
+    "iterations": 1000,
+    "evaluations": 1699,
+    "converged": false,
+    "message": "Maximum number of iterations has been exceeded."
+  },
+  "dcae": {
+    "loss": 0.1933545888189054,
+    "iterations": 1000,
+    "evaluations": 1786,
+    "converged": false,
+    "message": "Maximum number of iterations has been exceeded."
+  },
+  "calibration_indices": [
+    76,
+    15,
+    49,
+    57,
+    48,
+    36,
+    47
+  ],
+  "test_indices": [
+    2,
+    6,
+    10,
+    14,
+    18,
+    22,
+    26,
+    30,
+    34,
+    38,
+    42,
+    46,
+    50,
+    54,
+    58,
+    62,
+    66,
+    70,
+    74,
+    78
+  ],
+  "y_scaler_mean": [
+    10.280416666666664,
+    3.513500000000001,
+    8.667650000000004,
+    64.66720000000001
+  ],
+  "y_scaler_scale": [
+    0.3728753720153097,
+    0.16223414149514484,
+    0.5282015027430346,
+    0.8019042295270266
+  ]
+}

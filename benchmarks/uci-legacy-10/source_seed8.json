@@ -1,0 +1,52 @@
+{
+  "pretrain": {
+    "optimizer": "legacy-stochastic-CG",
+    "max_iter": 1000,
+    "corruption": 0.1,
+    "l2": 0.0,
+    "layers": [
+      {
+        "loss": 0.3278913174607371,
+        "iterations": 5,
+        "evaluations": 34,
+        "gradient_evaluations": 22,
+        "converged": false,
+        "message": "Desired error not necessarily achieved due to precision loss.",
+        "callback_losses": [
+          0.5313006713871279,
+          0.4337727851219509,
+          0.3736634781278954,
+          0.3490194442414151,
+          0.3310646588728144
+        ]
+      },
+      {
+        "loss": 0.11163942151621138,
+        "iterations": 9,
+        "evaluations": 48,
+        "gradient_evaluations": 37,
+        "converged": false,
+        "message": "Desired error not necessarily achieved due to precision loss.",
+        "callback_losses": [
+          0.548198436914823,
+          0.36291958718648204,
+          0.22611415543737703,
+          0.17879997924711027,
+          0.14854340962302948,
+          0.13854857159411002,
+          0.12568902623844755,
+          0.11933407017839427,
+          0.1152928723964487
+        ]
+      }
+    ],
+    "restore_returned_solution": true
+  },
+  "supervised": {
+    "loss": 0.051216241610189665,
+    "iterations": 616,
+    "evaluations": 1106,
+    "converged": true,
+    "message": "Optimization terminated successfully."
+  }
+}

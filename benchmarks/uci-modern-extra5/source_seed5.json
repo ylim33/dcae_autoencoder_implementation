@@ -1,0 +1,20 @@
+{
+  "pretrain": {
+    "optimizer": "Adam",
+    "steps_per_layer": 400,
+    "final_layer_losses": [
+      0.022743640327097928,
+      0.01568917362987999
+    ],
+    "corruption": 0.1,
+    "lr": 0.01,
+    "l2": 0.0
+  },
+  "supervised": {
+    "loss": 0.05141349613857268,
+    "iterations": 1000,
+    "evaluations": 1711,
+    "converged": false,
+    "message": "Maximum number of iterations has been exceeded."
+  }
+}

@@ -1,0 +1,23 @@
+# Local environments and generated artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.vscode/
+.env
+.env.*
+*.pem
+*.key
+results/
+data/*.mat
+reference/*.py
+reference/*.mat
+*.pt
+*.pth
+*.npz
+*.npy
+*.zip
+*.log
+!benchmarks/validation.log

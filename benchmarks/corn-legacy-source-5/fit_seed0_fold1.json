@@ -1,0 +1,91 @@
+{
+  "pretrain": {
+    "optimizer": "legacy-stochastic-CG",
+    "max_iter": 1000,
+    "corruption": 0.1,
+    "l2": 0.001,
+    "layers": [
+      {
+        "loss": 4.013436199120623,
+        "iterations": 13,
+        "evaluations": 48,
+        "gradient_evaluations": 36,
+        "converged": false,
+        "message": "Desired error not necessarily achieved due to precision loss.",
+        "callback_losses": [
+          6.948996487663531,
+          6.475928583104491,
+          4.932092331760923,
+          4.8460821382824255,
+          4.860946868509309,
+          4.490154558942587,
+          4.429817759922847,
+          4.252364125987857,
+          4.362887195971116,
+          4.3108874404751605,
+          4.307747637558126,
+          4.13308458410639,
+          3.923884030943172
+        ]
+      }
+    ],
+    "restore_returned_solution": true
+  },
+  "supervised": {
+    "loss": 0.08603457622686606,
+    "iterations": 1000,
+    "evaluations": 1700,
+    "converged": false,
+    "message": "Maximum number of iterations has been exceeded."
+  },
+  "dcae": {
+    "loss": 0.23851349623832585,
+    "iterations": 1000,
+    "evaluations": 1702,
+    "converged": false,
+    "message": "Maximum number of iterations has been exceeded."
+  },
+  "calibration_indices": [
+    40,
+    15,
+    78,
+    79,
+    20,
+    52,
+    8
+  ],
+  "test_indices": [
+    1,
+    5,
+    9,
+    13,
+    17,
+    21,
+    25,
+    29,
+    33,
+    37,
+    41,
+    45,
+    49,
+    53,
+    57,
+    61,
+    65,
+    69,
+    73,
+    77
+  ],
+  "y_scaler_mean": [
+    10.183033333333329,
+    3.491983333333334,
+    8.668450000000004,
+    64.7346
+  ],
+  "y_scaler_scale": [
+    0.38215825546783927,
+    0.1867942265048777,
+    0.472851683053647,
+    0.8178936198145415
+  ]
+}

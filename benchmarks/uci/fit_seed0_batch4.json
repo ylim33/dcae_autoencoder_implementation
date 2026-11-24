@@ -1,0 +1,7 @@
+{
+  "loss": 0.0196315155053434,
+  "iterations": 1000,
+  "evaluations": 1574,
+  "converged": false,
+  "message": "Maximum number of iterations has been exceeded."
+}

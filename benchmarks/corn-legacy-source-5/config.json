@@ -1,0 +1,42 @@
+{
+  "arguments": {
+    "data": "data/cornData.mat",
+    "output": "results/corn-legacy-source-5",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "budget": 7,
+    "steps": 1000,
+    "pretrain_steps": 1000,
+    "fidelity": "legacy",
+    "x_scaling": "source-train"
+  },
+  "python": "3.11.17",
+  "torch": "2.15.0+cpu",
+  "numpy": "2.4.6",
+  "scipy": "1.17.1",
+  "sklearn": "1.9.1",
+  "device": "cpu",
+  "dtype": "float64",
+  "dataset_sha256": "b34ffc226ae8b20726594ae20172554ed5b0bdf5aa005a049d951180b5126cad",
+  "code_sha256": {
+    "download_data.py": "f3403dcc85ce2cff617b82faa2ed2e08cafac40cd4b2951b40db2a1cc969484b",
+    "predict.py": "9714625d8e7bb6f0e9cc6e5797563623283db8cea6af6e35766deae7e0bf3634",
+    "report_fidelity.py": "b9cabaf0e63a0f22ccda492ba826255b0b0f38c14ef695f318d2351351e1bdf4",
+    "report_results.py": "04c5fd8aca6106f9e8b6f89f8675aa587f79c2472f4cb7f3a8df2df7155abd71",
+    "run_corn.py": "779ff584a25045e71cbcd6b6410d32ec56c1a506e7caac6ec329522c18ddbb2f",
+    "run_uci.py": "aed6945d232f55ca96de0aca28a972098b4bc51d58c8c2a101190172a6d95066",
+    "dcae\\data.py": "78ca552234e46c2114e8b59961a8052b7ef1df8e7c706f318fdd8da54ca135fd",
+    "dcae\\inference.py": "de0c7a0f7ffda98d10f4a7d50ee671c7f158611270e93cf7690132dd1a8a78a2",
+    "dcae\\legacy.py": "961297ddf821cc6cfcdcc763f4c5057e6253c49a7cdab867ff2c74b4f3331b64",
+    "dcae\\models.py": "1dd5292c36c7b823dea74a35af60168c751442da7f01d0fab929a95e1b601882",
+    "dcae\\training.py": "6059f470cbc2d01be6882225a34bb9cd23b21478b49730bd081d220eb23100dc",
+    "dcae\\utils.py": "90639cf04b47a53b9f3e5b178225d42b1ec0d867df8882a98a274e0fe185b4a9",
+    "dcae\\__init__.py": "73707b74fd36db029af3b35dbffa13cd4386788637bb9ad1666e1d02cc53c145"
+  },
+  "publication_note": "Local dataset path normalized; original bytes SHA-256 is recorded in benchmarks/source_artifacts_sha256.json. Code hashes refer to the files at experiment start."
+}
