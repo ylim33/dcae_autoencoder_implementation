@@ -32,7 +32,7 @@ Please cite the original paper when using this work. Citation files: [CITATION.c
 | [UCI Gas Sensor Array Drift at Different Concentrations](https://archive.ics.uci.edu/dataset/270/gas+sensor+array+drift+dataset+at+different+concentrations) | 13,910 measurements, 128 features, 6 gases; used for drift classification. | Publicly downloadable. UCI lists **CC BY 4.0**, which permits redistribution with attribution, a license link, and identification of changes. However, the same page retains an older research-only restriction; we link to the source rather than mirror it pending clarification. |
 | [Corn — Eigenvector Research](https://www.eigenvector.com/data/Corn/index.html) | 80 samples measured on 3 NIR instruments, 700 spectral channels and 4 properties; used for calibration transfer. | Publicly downloadable. No general redistribution license was found on the provider page, so we provide a source link rather than re-host the data. |
 
-This reproduction uses the original authors' prepared `UciData.mat` and `cornData.mat`, including calibration selections. Their repository does not separately specify a license for these prepared files. **Datasets are not included in this repository.** To retrieve the fixed upstream files locally and verify their checksums:
+This reproduction uses the original authors' prepared `UciData.mat` and `cornData.mat`, including calibration selections. Their repository does not separately specify a license for these prepared files. **Datasets are not included in this repository.** To retrieve the fixed upstream files locally:
 
 ```bash
 python download_data.py

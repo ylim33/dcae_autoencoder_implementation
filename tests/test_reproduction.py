@@ -70,10 +70,13 @@ class ReproductionTests(unittest.TestCase):
         self.assertEqual(p.item(),2.)
 
     def test_calibration_protocols(self):
-        x,y,ps,pt,masks,scaler,audit=load_uci(ROOT/'data/UciData.mat')
+        x,y,ps,pt,masks,scaler=load_uci(ROOT/'data/UciData.mat')
         self.assertEqual(sum(len(v) for v in x),13910)
         self.assertEqual([len(v) for v in pt],[10,10,10,10,10,10,8,6,10])
-        for mask,entry in zip(masks,audit): self.assertFalse(mask[entry['target_indices']].any())
+        for batch,pairs,mask in zip(x[1:],pt,masks):
+            for row in pairs:
+                nearest=((batch.numpy()-row.numpy())**2).sum(1).argmin()
+                self.assertFalse(mask[nearest])
         raw,labels,tr=load_corn(ROOT/'data/cornData.mat')
         for fold in range(4):
             train,test,cal=corn_split(tr,fold)

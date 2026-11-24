@@ -12,13 +12,13 @@ Ke Yan and David Zhang, *Correcting Instrumental Variation and Time-Varying Drif
 
 Original attribution: **Copyright 2016 YAN Ke, Tsinghua Univ.** Algorithmic credit belongs to the original authors. This repository contributes the framework migration, documented fixes, compatibility implementation, tests, and measured reproduction artifacts. It is not endorsed by the original authors.
 
-No explicit upstream license file was found at the pinned revision. The publication includes source links rather than a copy of the original toolbox. The local development audit used an unmodified upstream snapshot; statements in historical reports about `reference/*.py` refer to that snapshot. [reference/README.md](reference/README.md) maps those names to exact upstream URLs. See [LICENSE_STATUS.md](LICENSE_STATUS.md).
+No explicit upstream license file was found at the pinned revision. The publication includes source links rather than a copy of the original toolbox. [reference/README.md](reference/README.md) lists the exact upstream source URLs. See [LICENSE_STATUS.md](LICENSE_STATUS.md).
 
 ## Data
 
 - [UCI Gas Sensor Array Drift Dataset at Different Concentrations](https://archive.ics.uci.edu/dataset/270/gas+sensor+array+drift+dataset+at+different+concentrations). Attribute the data creators and publications listed there, including Vergara et al. (2012), *Chemical gas sensor drift compensation using classifier ensembles*, and Rodriguez-Lujan et al. (2014), *On the calibration of sensor arrays for pattern recognition using the minimal number of experiments*.
 - [Corn spectroscopy: Eigenvector Research](https://eigenvector.com/data/Corn/). The original DCAE repository supplies `cornData.mat` with device measurements and calibration indices.
-- `download_data.py` retrieves the authors' MATLAB files from the pinned commit and verifies SHA-256. Those files are not included in this repository. Consult the original providers for reuse terms and citation requirements.
+- `download_data.py` retrieves the authors' MATLAB files from the pinned commit. Those files are not included in this repository. Consult the original providers for reuse terms and citation requirements.
 - The private breath-analysis dataset described in the paper is absent from the original public repository and is not reproduced here.
 
 ## Random-stream compatibility and dependencies

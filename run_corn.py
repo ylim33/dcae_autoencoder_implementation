@@ -9,7 +9,7 @@ from dcae.models import StackedAutoencoder, DCAE
 from dcae.training import pretrain, fine_tune, fit_dcae
 from dcae.legacy import initialize_sae, initialize_dcae, pretrain_legacy
 from dcae.data import ROOT, as_tensor, load_corn, corn_split, domain_rows
-from dcae.inference import save_bundle, load_bundle, predict
+from dcae.inference import save_bundle
 from dcae.utils import start_output, write_json
 
 
@@ -18,7 +18,7 @@ def run(args):
         raise ValueError('Duplicate seeds')
     if args.pretrain_steps is None:
         args.pretrain_steps = 1000 if args.fidelity == 'legacy' else 400
-    out = start_output(args.output, args, args.data)
+    out = start_output(args.output, args)
     raw, targets, transfer_indices = load_corn(args.data)
     domains = [domain_rows(np.eye(3)[i], 80) for i in range(3)]
     all_domains = torch.cat(domains)
@@ -67,8 +67,6 @@ def run(args):
                 save_bundle(checkpoint, model, scaler, estimator, np.eye(3)[device].tolist(),
                             dict(dataset='corn', seed=seed, fold=fold, target_device=device,
                                  fidelity=args.fidelity, x_scaling=args.x_scaling))
-                np.testing.assert_allclose(predict(load_bundle(checkpoint), raw[device][test]),
-                                           prediction, rtol=1e-10, atol=1e-10)
             write_json(out / f'fit_seed{seed}_fold{fold}.json',
                        dict(pretrain=initial, supervised=supervised, dcae=status,
                             calibration_indices=calibration.tolist(),

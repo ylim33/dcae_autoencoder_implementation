@@ -1,6 +1,6 @@
 # Original-code reference links
 
-The original source is not vendored. These links resolve the filenames used in the audit reports to the fixed author revision.
+The original source is not vendored. These links resolve the original source filenames to the fixed author revision.
 
 Original attribution: Copyright 2016 YAN Ke, Tsinghua Univ.
 

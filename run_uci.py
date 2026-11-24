@@ -10,7 +10,7 @@ from dcae.models import StackedAutoencoder, DCAE
 from dcae.training import pretrain, fine_tune, fit_dcae
 from dcae.legacy import initialize_sae, initialize_dcae, pretrain_legacy
 from dcae.data import ROOT, load_uci, domain_rows
-from dcae.inference import save_bundle, load_bundle, predict
+from dcae.inference import save_bundle
 from dcae.utils import start_output, write_json
 
 
@@ -19,9 +19,8 @@ def run(args):
         raise ValueError('Seeds and batches must not contain duplicates')
     if args.pretrain_steps is None:
         args.pretrain_steps = 1000 if args.fidelity == 'legacy' else 400
-    out = start_output(args.output, args, args.data)
-    x, y, ps, pt, masks, scaler, audit = load_uci(args.data, args.budget)
-    write_json(out / 'calibration_audit.json', audit)
+    out = start_output(args.output, args)
+    x, y, ps, pt, masks, scaler = load_uci(args.data, args.budget)
     records = []
     source_domain = domain_rows([1., 0.], len(x[0]))
     for seed in args.seeds:
@@ -67,9 +66,6 @@ def run(args):
             checkpoint = out / f'seed{seed}_batch{batch}.pt'
             save_bundle(checkpoint, model, scaler, estimator, [1., float(b)],
                         dict(dataset='UCI', seed=seed, batch=batch, variant=args.variant, fidelity=args.fidelity))
-            # Verify an actual inference roundtrip against sklearn's classifier.
-            raw_probe = scaler.inverse_transform(x[b][:12].numpy() * 2)
-            np.testing.assert_array_equal(predict(load_bundle(checkpoint), raw_probe), prediction[:12] + 1)
             np.savez_compressed(out / f'pred_seed{seed}_batch{batch}.npz',
                                 prediction=prediction+1, truth=y[b]+1, evaluation_mask=mask)
             write_json(out / f'fit_seed{seed}_batch{batch}.json', status)

@@ -10,7 +10,7 @@ def minimize_cg(parameters, objective, max_iter=1000):
     """One deterministic objective/gradient evaluation per SciPy call.
 
     Always restores result.x, rather than leaving a last line-search probe in
-    the network. Non-convergence status is retained in the output manifest.
+    the network. Non-convergence status is saved with the training results.
     """
     if max_iter < 1:
         raise ValueError('max_iter must be positive')

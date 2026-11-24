@@ -20,4 +20,3 @@ reference/*.mat
 *.npy
 *.zip
 *.log
-!benchmarks/validation.log

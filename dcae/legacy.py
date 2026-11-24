@@ -50,7 +50,7 @@ def initialize_dcae(model, rng):
 def pretrain_legacy(sae, x, streams, steps=1000, corruption=.1, l2=0.):
     """Reproduce separate stochastic cost/gradient calls and cost callback.
 
-    This mode intentionally retains noisy CG to audit implementation fidelity.
+    This mode intentionally retains noisy CG to follow the original implementation.
     It is not a recommendation for optimizing general denoising autoencoders.
     As elsewhere in this port, the returned optimum is explicitly restored.
     """
