@@ -26,3 +26,11 @@ No explicit upstream license file was found at the pinned revision. The publicat
 The legacy seed-expansion behavior was checked against [Theano 0.9 shared_randomstreams.py](https://github.com/Theano/Theano/blob/rel-0.9.0/theano/tensor/shared_randomstreams.py). This implementation uses NumPy RandomState for seed expansion and binomial draws; it has no runtime Theano dependency and is not claimed to be bitwise equivalent to an executed Theano run.
 
 The software depends on PyTorch, NumPy, SciPy, and scikit-learn. These projects retain their respective licenses and attribution. No dependency source is vendored here.
+
+## Dataset redistribution check (2026-11-24)
+
+The [UCI dataset page](https://archive.ics.uci.edu/dataset/270/gas+sensor+array+drift+dataset+at+different+concentrations) currently lists [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), which permits sharing under its attribution, license-link and change-notice conditions. The same page also retains older research-only / noncommercial wording. This publication does not resolve that inconsistency and links to the provider rather than mirroring the files.
+
+The [Eigenvector Corn page](https://www.eigenvector.com/data/Corn/index.html) offers the data for download and credits Cargill and Mike Blackburn for allowing Eigenvector to distribute it. No general license granting downstream redistribution was found on that page. This is not a claim that all redistribution is prohibited; permission would need to be established before this repository mirrors it.
+
+The DCAE authors' MATLAB files additionally contain prepared calibration selections and have no separate license statement in the upstream repository. They remain excluded from Git. The download script retrieves them locally without changing their terms.
